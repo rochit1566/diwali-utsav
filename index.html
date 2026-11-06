@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Diwali Utsav — your companion for the festival of lights.">
+  <title>Diwali Utsav | Festival of Lights</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header class="navbar">
+    <a href="#home" class="logo">🪔 Diwali Utsav</a>
+    <nav>
+      <a href="#home">Home</a><a href="#about">About</a>
+      <a href="#ideas">Ideas</a><a href="#tools">Festival Tools</a>
+      <a href="#puja">Puja Checklist</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">✦ THE FESTIVAL OF LIGHTS ✦</p>
+        <h1>Celebrate the Magic<br>of <span>Diwali</span></h1>
+        <p class="hero-description">Light up your home, share happiness, and make every moment unforgettable.</p>
+        <a href="#tools" class="gold-button">Explore Festival Tools →</a>
+        <div class="countdown">
+          <p>Diwali Countdown</p>
+          <div id="timer" aria-live="polite">Loading…</div>
+          <small>Countdown target: 8 November 2026</small>
+        </div>
+      </div>
+      <div class="hero-diya" aria-label="Decorative diya">🪔</div>
+    </section>
+
+    <section class="section" id="about">
+      <p class="eyebrow">THE STORY OF LIGHT</p>
+      <h2>Welcome to <span>Diwali Utsav</span></h2>
+      <p class="section-description">Diwali is a celebration of light, happiness, prosperity and togetherness. Use this little festival companion to plan your celebrations.</p>
+    </section>
+
+    <section class="section" id="ideas">
+      <p class="eyebrow">CELEBRATE BEAUTIFULLY</p>
+      <h2>Festival Inspiration</h2>
+      <div class="card-grid">
+        <article class="festival-card"><div class="card-image">🌸</div><h3>Rangoli Ideas</h3><p>Try flower, traditional and modern rangoli patterns at your entrance.</p></article>
+        <article class="festival-card"><div class="card-image">✨</div><h3>Home Decoration</h3><p>Brighten your home with diyas, fairy lights and marigold flowers.</p></article>
+        <article class="festival-card"><div class="card-image">🍬</div><h3>Festive Recipes</h3><p>Prepare favourite sweets and snacks to share with family and friends.</p></article>
+        <article class="festival-card"><div class="card-image">🎁</div><h3>Thoughtful Gifts</h3><p>Make a small hamper with sweets, candles or a handwritten note.</p></article>
+      </div>
+    </section>
+
+    <section class="section tools-section" id="tools">
+      <p class="eyebrow">PLAN YOUR CELEBRATION</p>
+      <h2>Your Festival Toolkit</h2>
+      <div class="tool-grid">
+        <div class="tool-card">
+          <h3>🛍️ Shopping Checklist</h3>
+          <form id="shoppingForm">
+            <input id="shoppingInput" placeholder="Add an item, e.g. diyas" maxlength="80" required>
+            <button type="submit">Add item</button>
+          </form>
+          <ul id="shoppingList"></ul>
+        </div>
+        <div class="tool-card">
+          <h3>💰 Budget Calculator</h3>
+          <form id="expenseForm">
+            <input type="number" id="expense" min="0.01" step="0.01" placeholder="Enter expense in ₹" required>
+            <button type="submit">Add expense</button>
+          </form>
+          <p class="total-label">Total spending</p><h2 id="total">₹0</h2>
+        </div>
+        <div class="tool-card">
+          <h3>💌 Greeting Maker</h3>
+          <form id="greetingForm">
+            <input id="person" placeholder="Enter a person's name" maxlength="60" required>
+            <button type="submit">Create greeting</button>
+          </form>
+          <p id="greeting" class="result" aria-live="polite"></p>
+        </div>
+        <div class="tool-card diya-tool">
+          <h3>🪔 Virtual Diya</h3>
+          <div id="virtualDiya" class="virtual-diya">🪔</div>
+          <button id="diyaButton" type="button">Light the diya</button>
+          <p id="diyaMessage" class="result" aria-live="polite">Spread happiness and light!</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section puja-section" id="puja">
+      <p class="eyebrow">TRADITION & TOGETHERNESS</p>
+      <h2>Diwali Puja Essentials</h2>
+      <p class="section-description">A simple preparation checklist. Follow the customs and timings observed by your family.</p>
+      <div class="puja-list">
+        <label><input type="checkbox"> Puja thali</label>
+        <label><input type="checkbox"> Diyas and cotton wicks</label>
+        <label><input type="checkbox"> Flowers and garlands</label>
+        <label><input type="checkbox"> Fruits and sweets</label>
+        <label><input type="checkbox"> Incense sticks</label>
+        <label><input type="checkbox"> Clean cloth and decorations</label>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <h2>🪔 Diwali Utsav</h2>
+    <p>May your life shine as brightly as a million diyas.</p>
+    <p class="copyright">© 2026 Diwali Utsav · Made with ❤️</p>
+  </footer>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
