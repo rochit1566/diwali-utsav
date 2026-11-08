@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 
 app = Flask(__name__)
 
@@ -8,7 +8,7 @@ def home():
 
 @app.route("/health")
 def health():
-    return {"status": "Diwali Utsav is running!"}
+    return jsonify({"status": "ok", "project": "Diwali Utsav Planner"})
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
